@@ -1,103 +1,113 @@
-# SmartParker_Cloud: API de Gerenciamento para Pátios de Motos
+SmartParker_Cloud: API de Gerenciamento para Pátios de Motos
 
-**SmartParker API**
-
-<p align="center">
-  <img src="Capa.png" alt="Banner SmartParker Cloud - API de Gestão" style="width: 100%; max-height: 250px; object-fit: cover;">
-</p>
-
-## 📝 Descrição do Projeto
-
-A **SmartParker_Cloud** é a API backend do sistema SmartParker, desenvolvida em Java com o framework Spring Boot. Ela atua como o coração do gerenciamento do pátio de motos, fornecendo uma camada robusta para controle de usuários, motos, pátios, setores e localizações.
+📝 Descrição do Projeto
+A SmartParker_Cloud é a API backend do sistema SmartParker, desenvolvida em Java com o framework Spring Boot. Ela atua como o coração do gerenciamento do pátio de motos, fornecendo uma camada robusta para controle de usuários, motos, pátios, setores e localizações.
 
 Esta API implementa todas as funcionalidades de um CRUD (Create, Read, Update, Delete) e vai além, oferecendo recursos avançados como:
-* Buscas parametrizadas para consultas flexíveis e eficientes.
-* Paginação e ordenação para otimização da exibição e manipulação de grandes volumes de dados.
-* Cache para otimizar requisições repetidas, reduzindo a carga no banco de dados e melhorando significativamente a performance e a escalabilidade.
-* É projetada para ser o ponto de integração para dados de reconhecimento de placas (provenientes de módulos como o SmartParker_OCR) e para sistemas de frontend.
 
-## 🎓 Alunos
+Buscas parametrizadas para consultas flexíveis e eficientes.
 
-**2tdspx:**
-* Caio Cesar – rm556331
-* Guilherme Grizão – rm557958
+Paginação e ordenação para otimização da exibição e manipulação de grandes volumes de dados.
 
-**2tdspy:**
-* Pietro Cougo – rm555839
+Cache para otimizar requisições repetidas, reduzindo a carga no banco de dados e melhorando significativamente a performance e a escalabilidade.
 
-## 🚀 Tecnologias e Recursos Utilizados
+Integração com sistemas de reconhecimento de placas (ex: SmartParker_OCR) e sistemas frontend.
 
-* **Java 17:** Linguagem de programação principal para o backend.
-* **Spring Boot:** Framework líder para desenvolvimento rápido e robusto de aplicações Java baseadas em microsserviços.
-* **H2 Database:** Banco de dados relacional em memória, ideal para desenvolvimento, testes e prototipagem rápida.
-* **Maven:** Ferramenta padrão de automação de build e gerenciamento de dependências para projetos Java.
-* **Spring Cache:** Módulo do Spring para fácil implementação de cache em métodos e endpoints, otimizando o desempenho.
-* **Bean Validation:** API para validação de dados de entrada, garantindo a integridade dos dados.
-* **JPA Specifications:** Usado para construir consultas dinâmicas e tipadas ao banco de dados.
-* **Pageable e ordenação de endpoints:** Funcionalidades do Spring Data para fácil implementação de paginação e ordenação em respostas de API.
-* **Manipulação de erros com `@ControllerAdvice`:** Para um tratamento centralizado e consistente de exceções na API.
-* **DTOs (Data Transfer Objects):** Objetos utilizados para transportar dados entre as camadas da aplicação, otimizando a comunicação e a segurança.
-* **Docker:** Para conteinerização da aplicação, facilitando a implantação e escalabilidade.
-* **Azure CLI:** Linha de comando para gerenciamento de recursos no Microsoft Azure, incluindo Máquinas Virtuais.
+🎓 Alunos
+2tdspx:
 
-## 📦 Instruções para Executar o Projeto Localmente
+Caio Cesar – rm556331
 
-### Requisitos
+Guilherme Grizão – rm557958
 
-* Java Development Kit (JDK) 17 ou superior.
-* Apache Maven 3.6+ (geralmente incluído com o `mvnw.cmd` no projeto Spring Boot).
+2tdspy:
 
-### Passos para Rodar
+Pietro Cougo – rm555839
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/](https://github.com/)[SEU_USUARIO_GITHUB]/SmartParker_Cloud.git # Ajuste para o link correto do seu repositório da API
-    cd SmartParker_Cloud # Ou o nome da pasta raiz do seu projeto API
-    ```
-2.  **Execute a aplicação com Maven:**
-    ```bash
-    ./mvnw spring-boot:run # No Linux/macOS
-    # Ou no Windows:
-    mvnw.cmd spring-boot:run
-    ```
-3.  **Acesse a API em:**
-    ```
-    http://localhost:8080
-    ```
-    (Ou a porta configurada no `application.properties`, se for diferente.)
+🚀 Tecnologias e Recursos Utilizados
+Java 17
 
----
+Spring Boot
 
-## ☁️ Implantação e Gerenciamento na Nuvem (Azure VM)
+H2 Database
 
-Este projeto pode ser implantado em uma Máquina Virtual (VM) no Microsoft Azure. Abaixo estão os comandos do Azure CLI para criar, configurar e gerenciar a VM, bem como para implantar a aplicação usando Docker.
+Maven
 
-### Pré-requisitos para o Azure
+Spring Cache
 
-* Uma conta Azure ativa.
-* Azure CLI instalado e configurado (faça login com `az login`).
+Bean Validation
 
-### 1. Criar e Configurar a Máquina Virtual (VM)
+JPA Specifications
 
-**Arquivo `create_vm.sh`:**
+Pageable e ordenação
 
-Crie um arquivo chamado `create_vm.sh` na raiz do seu repositório da API e cole o seguinte conteúdo:
+@ControllerAdvice
 
-```bash
+DTOs
+
+Docker
+
+Azure CLI
+
+📦 Instruções para Executar o Projeto Localmente
+✅ Requisitos
+JDK 17+
+
+Apache Maven 3.6+
+
+▶️ Passos para Rodar Localmente
+Clone o repositório:
+
+bash
+Copiar
+Editar
+git clone https://github.com/SEU_USUARIO_GITHUB/SmartParker_Cloud.git
+cd SmartParker_Cloud
+Execute a aplicação:
+
+bash
+Copiar
+Editar
+./mvnw spring-boot:run # Linux/macOS
+# Ou no Windows:
+mvnw.cmd spring-boot:run
+Acesse a API em:
+
+arduino
+Copiar
+Editar
+http://localhost:8080
+☁️ Implantação na Nuvem (Azure VM com Docker)
+Este projeto pode ser implantado em uma Máquina Virtual (VM) do Azure com Docker para execução em ambiente de produção.
+
+📌 Pré-requisitos
+Conta no Azure
+
+Azure CLI instalado e autenticado (az login)
+
+Docker instalado na VM
+
+🔧 Etapa 1: Criar e Configurar a Máquina Virtual no Azure
+Execute no seu terminal local:
+
+bash
+Copiar
+Editar
 #!/bin/bash
 
 RESOURCE_GROUP="smartparker-rg"
 VM_NAME="smartparker-vm"
-LOCATION="eastus" # Escolha uma região, ex: "brazilsouth" ou "westus"
+LOCATION="eastus"
 IMAGE="UbuntuLTS"
-SIZE="Standard_DS1_v2" # Tamanho da VM (ajuste conforme necessidade)
+SIZE="Standard_DS1_v2"
 ADMIN_USERNAME="mottuadmin"
-ADMIN_PASSWORD="Fiap@2tdsvms" # <<<<<<<< ATENÇÃO: Altere esta senha para algo seguro!
+ADMIN_PASSWORD="Fiap@2tdsvms"
+HTTP_PORT=80
+HTTPS_PORT=443
+APP_PORT=8080
 
-echo "Criando o grupo de recursos $RESOURCE_GROUP na região $LOCATION..."
 az group create --name "$RESOURCE_GROUP" --location "$LOCATION"
 
-echo "Criando a máquina virtual $VM_NAME..."
 az vm create \
   --resource-group "$RESOURCE_GROUP" \
   --name "$VM_NAME" \
@@ -105,20 +115,64 @@ az vm create \
   --size "$SIZE" \
   --admin-username "$ADMIN_USERNAME" \
   --admin-password "$ADMIN_PASSWORD" \
-  --output tsv # Output em formato tsv para facilitar extração de dados
+  --output tsv
 
-echo "VM criada com sucesso! Anote o IP público para acesso SSH."
 az vm show --resource-group "$RESOURCE_GROUP" --name "$VM_NAME" --show-details --query publicIps -o tsv
 
-echo "Aguardando alguns segundos para a VM inicializar e instalar o Docker..."
-sleep 30 # Dá um tempo para a VM subir completamente
-
-echo "Instalando Docker na VM..."
-# Comandos para executar na VM via SSH para instalar Docker
 az vm run-command \
   --resource-group "$RESOURCE_GROUP" \
   --name "$VM_NAME" \
   --command-id RunShellScript \
   --scripts "sudo apt-get update && sudo apt-get install -y docker.io && sudo systemctl start docker && sudo systemctl enable docker && sudo usermod -aG docker $ADMIN_USERNAME"
 
-echo "Docker instalado. Você pode precisar se reconectar via SSH para as permissões do Docker entrarem em vigor."
+az vm open-port --resource-group "$RESOURCE_GROUP" --name "$VM_NAME" --priority 1002 --port "$HTTP_PORT"
+az vm open-port --resource-group "$RESOURCE_GROUP" --name "$VM_NAME" --priority 1003 --port "$HTTPS_PORT"
+az vm open-port --resource-group "$RESOURCE_GROUP" --name "$VM_NAME" --priority 1004 --port "$APP_PORT"
+🐳 Etapa 2: Implantação com Docker na VM
+1. Criar o JAR localmente
+bash
+Copiar
+Editar
+cd /caminho/para/SmartParker_Cloud
+mvn clean install
+2. Copiar o JAR para a VM
+bash
+Copiar
+Editar
+scp target/<NOME_DO_JAR>.jar mottuadmin@<IP_PUBLICO_DA_VM>:/home/mottuadmin/app.jar
+3. Acessar a VM via SSH
+bash
+Copiar
+Editar
+ssh mottuadmin@<IP_PUBLICO_DA_VM>
+4. Criar o Dockerfile na VM
+dockerfile
+Copiar
+Editar
+# Dockerfile
+FROM openjdk:17-jdk-slim
+VOLUME /tmp
+COPY app.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+Salve com Ctrl+O e Ctrl+X se estiver usando nano.
+
+5. Construir a imagem Docker
+bash
+Copiar
+Editar
+docker build -t smartparker-api .
+6. Executar o container
+bash
+Copiar
+Editar
+docker run -d -p 8080:8080 --name smartparker smartparker-api
+✅ Verificação
+Acesse no navegador:
+
+cpp
+Copiar
+Editar
+http://<IP_PUBLICO_DA_VM>:8080
+📮 Contato
+Em caso de dúvidas, sugestões ou melhorias, entre em contato com os desenvolvedores mencionados ou abra uma Issue no repositório.
+
